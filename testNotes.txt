@@ -1,0 +1,19 @@
+
+Tiny Array
+Insert = 39.41 microseconds
+Append= 105.85 microseconds
+
+Medium Array
+Insert = 166.31 microseconds
+Append= 167.5 microseconds
+
+Large Array
+Insert = 7.1 milliseconds
+Append= 652.325 microseconds
+
+Extra Large Array
+Insert = 1.0403 seconds
+Append= 4.497 milliseconds
+
+
+The doublerAppend function has an O(1) and the doubleInsert has an O(n). Initially, they are comparable in the time it takes to run them, but the doubleInsert time will have linear growth DEPENDENT on the size of the array. This is because the .unshift method requires every item in the array receive a new categorization/value when a new number is inserted onto the front of the array. While in doublerAppend function, the .push method simply adds an element on to the end of the array. The other items in the array do not have to be recatergorized/numbered, so the time complexity is essentially INDEPENDENT of the size of the array pased in.
